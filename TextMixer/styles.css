@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+  font-family: 'Fredoka One', cursive;
+  background: linear-gradient(135deg, #fff8dc, #fceabb);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  animation: bg-wiggle 10s infinite alternate;
+}
+
+@keyframes bg-wiggle {
+  0% { background-position: left top; }
+  100% { background-position: right bottom; }
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #fff3b0;
+  border-radius: 30px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
+  transform: rotate(-1deg);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: rotate(1deg);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 5px;
+  color: #ff6347;
+  text-shadow: 2px 2px #ffe;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+select, button {
+  margin: 10px;
+  padding: 12px 22px;
+  border-radius: 15px;
+  border: 2px solid #ffb347;
+  background: #fff8dc;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+select:hover, button:hover {
+  background: #ffdab9;
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.excuse-box {
+  margin-top: 25px;
+  padding: 25px;
+  background: #fff9e6;
+  border: 3px dashed #ffa07a;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  color: #222;
+  min-height: 60px;
+  transition: transform 0.2s ease;
+  animation: pop-in 0.5s ease;
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}

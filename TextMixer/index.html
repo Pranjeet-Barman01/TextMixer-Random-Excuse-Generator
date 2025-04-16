@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TextMixer - Random Excuse Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>TextMixer - Excuse Generator</h1>
+    <p>Generate a random excuse based on a selected category</p>
+
+    <form>
+      <select id="category" name="category">
+        <option value="school">School</option>
+        <option value="work">Work</option>
+        <option value="personal">Personal</option>
+      </select>
+
+      <button type="button" onclick="generateExcuse()">Generate Excuse</button>
+    </form>
+
+    <div class="excuse-box" id="excuse-box">
+      Your random excuse will appear here.
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="developer-info">
+      <p>Created by <strong>Pranjeet Barman</strong></p>
+      <p>Computer Science Engineering Student</p>
+      <p>Passionate about Web Development, Problem Solving, and Creative Projects.</p>
+      <p>Contact: <a href="mailto:your-email@example.com">pranjeetb01@gmail.com</a></p>
+      <p>Find me on: 
+        <a href="https://www.linkedin.com/in/pranjeet-barman/" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/Pranjeet-Barman01" target="_blank">GitHub</a>
+      </p>
+      <p>&copy; 2025 TextMixer. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function generateExcuse() {
+      const excuses = {
+        school: [
+          "I was busy studying for another subject.",
+          "I had to help my friend with their homework.",
+          "I accidentally overslept.",
+          "I got stuck in traffic on my way to school."
+        ],
+        work: [
+          "I had to attend an urgent meeting.",
+          "I was feeling unwell and had to take a break.",
+          "I lost track of time working on an important task.",
+          "The power went out in my office."
+        ],
+        personal: [
+          "I had a family emergency.",
+          "I was dealing with some personal issues.",
+          "I had to go to an appointment.",
+          "I had an unexpected visitor at home."
+        ]
+      };
+
+      const category = document.getElementById('category').value;
+      const randomIndex = Math.floor(Math.random() * excuses[category].length);
+      const excuse = excuses[category][randomIndex];
+      
+      document.getElementById('excuse-box').textContent = excuse;
+    }
+  </script>
+
+</body>
+</html>
