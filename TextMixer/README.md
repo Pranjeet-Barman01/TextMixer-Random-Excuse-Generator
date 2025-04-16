@@ -20,7 +20,7 @@ JavaScript: Logic to generate random excuses based on user selection.
 Installation
 You can run this project locally by following the steps below:
 
-https://github.com/your-github/textmixer.git
+https://github.com/Pranjeet-Barman01/textmixer.git
 
 
 Open the index.html file in your browser: Simply double-click the index.html file or open it via your preferred browser to launch the app.
